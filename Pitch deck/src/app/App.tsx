@@ -87,9 +87,9 @@ function CoverSlide() {
         </div>
         <div className="absolute bottom-16 left-0 right-0 flex flex-col gap-8 px-12">
           {[
-            { value: "$1.6B", label: "Current Backlog" },
+            { value: "$1.8B", label: "Current Backlog" },
             { value: "75+", label: "Years of Powell Culture" },
-            { value: "$501M", label: "Cash Position to Deploy" },
+            { value: "$545M", label: "Cash Position to Deploy" },
           ].map((stat) => (
             <div key={stat.label} className="border-l-2 pl-4" style={{ borderColor: "var(--accent)" }}>
               <p className="text-3xl font-semibold" style={{ fontFamily: "Playfair Display, serif", color: "var(--foreground)" }}>
@@ -123,7 +123,7 @@ function OhioSlide() {
     },
     {
       label: "Capacity Choke",
-      impact: "Every minor adjustment requires an outside contractor. With a $400M+ data center mega-order on the line, that delay is not acceptable.",
+      impact: "Every minor adjustment requires an outside contractor. With a $400M+ data center mega-order now booked, that delay is not acceptable.",
     },
   ];
 
@@ -413,10 +413,10 @@ function CapitalSlide() {
           className="text-5xl font-semibold leading-tight mb-6"
           style={{ fontFamily: "Playfair Display, serif", color: "var(--foreground)" }}
         >
-          A $1M pilot against a $1.6B backlog.
+          A $1M pilot against a $1.8B backlog.
         </h2>
         <p className="text-base leading-relaxed mb-10 max-w-lg" style={{ fontFamily: "DM Sans, sans-serif", color: "var(--muted-foreground)" }}>
-          Powell's cash position is $501M. This isn't a $10M gamble — it's a focused pilot to solve a specific coordination problem. Even a 1% throughput gain against our current backlog pays for this division in months.
+          Powell's cash position is $545M. This isn't a $10M gamble — it's a focused pilot to solve a specific coordination problem. Even a 1% throughput gain against our current backlog pays for this division in months.
         </p>
 
         <div className="flex flex-col gap-3 mb-8">
@@ -453,7 +453,7 @@ function CapitalSlide() {
             { metric: "Weld cycle time reduction", value: "30%" },
             { metric: "Software cost to scale globally", value: "$0" },
             { metric: "Estimated payback period", value: "< 12 mo" },
-            { metric: "Backlog against pilot cost", value: "1,882×" },
+            { metric: "Backlog against pilot cost", value: "2,118×" },
           ].map((r) => (
             <div key={r.metric} className="flex justify-between items-center py-3" style={{ borderBottom: "1px solid var(--border)" }}>
               <span className="text-xs" style={{ fontFamily: "DM Sans, sans-serif", color: "var(--muted-foreground)" }}>{r.metric}</span>
