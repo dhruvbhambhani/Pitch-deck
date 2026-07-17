@@ -61,8 +61,8 @@ function CoverSlide() {
           </div>
           <div>
             <p className="text-xs tracking-widest uppercase mb-1" style={{ color: "var(--muted-foreground)", fontFamily: "DM Sans, sans-serif" }}>Audience</p>
-            <p className="text-base font-medium" style={{ fontFamily: "DM Sans, sans-serif", color: "var(--foreground)" }}>Brett Cope</p>
-            <p className="text-sm" style={{ fontFamily: "DM Sans, sans-serif", color: "var(--muted-foreground)" }}>CEO</p>
+            <p className="text-base font-medium" style={{ fontFamily: "DM Sans, sans-serif", color: "var(--foreground)" }}>Marshall</p>
+            <p className="text-sm" style={{ fontFamily: "DM Sans, sans-serif", color: "var(--muted-foreground)" }}>VP</p>
           </div>
         </div>
       </div>
