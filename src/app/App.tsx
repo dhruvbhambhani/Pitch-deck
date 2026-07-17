@@ -625,6 +625,24 @@ const SLIDES = [
 ];
 
 // ─── App shell ─────────────────────────────────────────────────────────────────
+// Slides are laid out on a fixed canvas and scaled to fit the viewport, so the
+// deck renders identically on any screen size instead of clipping on short ones.
+const DESIGN_WIDTH = 1600;
+const DESIGN_HEIGHT = 900;
+
+function useFitScale() {
+  const [scale, setScale] = useState(() =>
+    Math.min(window.innerWidth / DESIGN_WIDTH, window.innerHeight / DESIGN_HEIGHT)
+  );
+  useEffect(() => {
+    const update = () =>
+      setScale(Math.min(window.innerWidth / DESIGN_WIDTH, window.innerHeight / DESIGN_HEIGHT));
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+  return scale;
+}
+
 export default function App() {
   const [current, setCurrent] = useState(() => {
     const p = new URLSearchParams(window.location.search).get("slide");
@@ -672,12 +690,22 @@ export default function App() {
   }, [navigate]);
 
   const { Component: CurrentSlide } = SLIDES[current];
+  const scale = useFitScale();
 
   return (
     <div
-      className="w-full h-screen overflow-hidden relative flex flex-col"
+      className="w-full h-screen overflow-hidden flex items-center justify-center"
       style={{ background: "var(--background)" }}
     >
+      <div
+        className="overflow-hidden relative flex flex-col flex-shrink-0"
+        style={{
+          width: DESIGN_WIDTH,
+          height: DESIGN_HEIGHT,
+          transform: `scale(${scale})`,
+          background: "var(--background)",
+        }}
+      >
       <div
         className="flex-1 relative"
         style={{
@@ -746,6 +774,7 @@ export default function App() {
             <ChevronRight size={15} />
           </button>
         </div>
+      </div>
       </div>
     </div>
   );
