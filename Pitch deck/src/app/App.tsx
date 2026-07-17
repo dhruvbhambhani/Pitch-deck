@@ -466,7 +466,7 @@ function CapitalSlide() {
           style={{ background: "rgba(196,150,58,0.08)", border: "1px solid rgba(196,150,58,0.2)" }}
         >
           <p className="text-xs tracking-widest uppercase mb-2" style={{ fontFamily: "DM Sans, sans-serif", color: "var(--accent)" }}>
-            For Bret Cope (CFO)
+            For Brett Cope (CEO)
           </p>
           <p className="text-sm leading-relaxed" style={{ fontFamily: "DM Sans, sans-serif", color: "var(--foreground)" }}>
             Safety gains: reduced repetitive-strain incidents in welding. Efficiency gains: 30% faster cycle times, quantified per order. The math needs to math — and it does.
@@ -650,8 +650,8 @@ function AskSlide() {
             note: "If no new shop, focus on stations only — not transport across the floor. The floor is messy. Stations are the real opening.",
           },
           {
-            point: "CFO language",
-            note: "Bret Cope thinks in numbers. Quantified efficiency + safety gains only. No vision statements without math behind them.",
+            point: "CEO language",
+            note: "Brett Cope thinks in numbers. Quantified efficiency + safety gains only. No vision statements without math behind them.",
           },
         ].map((n) => (
           <div
